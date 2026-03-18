@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"id":"fdb7a59b487cca5b","type":"file","file":"project-concept/Customer Facing Page Architecture.md","x":-240,"y":-440,"width":400,"height":160},
+		{"id":"94fdfa9a4fae0b34","type":"file","file":"project-concept/Admin Panel Architecture.md","x":520,"y":-429,"width":400,"height":138},
+		{"id":"fb2552cf30495f08","type":"file","file":"project-concept/Front-End Architecture.md","x":160,"y":-920,"width":360,"height":244},
+		{"id":"5fc5ffe6ab9bc247","type":"file","file":"project-concept/Admin Panel.md","x":600,"y":-50,"width":400,"height":200},
+		{"id":"da28bb4282298ae0","type":"file","file":"project-concept/Customer Facing Page.md","x":-320,"y":-50,"width":400,"height":180}
+	],
+	"edges":[
+		{"id":"21cb2fe5b674a104","fromNode":"fdb7a59b487cca5b","fromSide":"bottom","toNode":"da28bb4282298ae0","toSide":"top"},
+		{"id":"495d27dcd3caf9d0","fromNode":"94fdfa9a4fae0b34","fromSide":"bottom","toNode":"5fc5ffe6ab9bc247","toSide":"top"},
+		{"id":"d5bcb3d32dfd1622","fromNode":"fb2552cf30495f08","fromSide":"bottom","toNode":"fdb7a59b487cca5b","toSide":"right"},
+		{"id":"02ee1c7924291a35","fromNode":"fb2552cf30495f08","fromSide":"bottom","toNode":"94fdfa9a4fae0b34","toSide":"left"},
+		{"id":"17333fa86735ac2b","fromNode":"da28bb4282298ae0","fromSide":"right","toNode":"5fc5ffe6ab9bc247","toSide":"left","label":"Sign Up/Onboarding"}
+	]
+}
