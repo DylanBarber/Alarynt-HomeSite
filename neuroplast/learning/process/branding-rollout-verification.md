@@ -1,4 +1,5 @@
 # Learning: verify full-string brand migrations
+#learning
 
 ## Context
 During the Alarynt rebrand, a search initially showed one remaining legacy brand reference in an Obsidian workspace recent-files list.

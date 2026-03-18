@@ -1,4 +1,5 @@
 # Conceptualization Instructions (AI-Operator Format)
+#instruction
 
 ## Purpose
 Create project concept artifacts only. Do not implement product code in this phase.

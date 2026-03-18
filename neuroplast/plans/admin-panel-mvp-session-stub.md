@@ -1,4 +1,5 @@
 # Plan: Admin Panel MVP (Session Stub)
+#plan
 
 ## Goal
 Implement the planned authenticated admin panel in `web/` using an MVP cookie/session stub for access control and navigation.

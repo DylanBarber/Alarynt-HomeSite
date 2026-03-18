@@ -1,4 +1,5 @@
 # Learning: premium dark theming needs token-only surfaces
+#learning
 
 ## Context
 While applying a premium dark theme to the customer-facing site, a few controls and cards still used light hardcoded classes (like `bg-white`), which caused inconsistent contrast and visual hierarchy.

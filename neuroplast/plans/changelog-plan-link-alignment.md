@@ -1,4 +1,5 @@
 # Plan: Changelog Plan-Link Alignment
+#plan
 
 ## Goal
 Ensure plan artifacts in `brain/plans/` are linked from the correct dated changelog files in `brain/project-concept/changelog/`.

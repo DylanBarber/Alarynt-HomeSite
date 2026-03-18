@@ -1,4 +1,5 @@
 # Learning Capture Instructions (AI-Operator Format)
+#instruction
 
 ## Purpose
 Capture reusable, non-sensitive execution learnings to improve future work quality.
@@ -10,6 +11,7 @@ Capture reusable, non-sensitive execution learnings to improve future work quali
 ## Outputs
 - New or updated markdown note(s) in `/neuroplast/learning/` categorized by topic
 - Cross-links to related learning notes when relevant
+- Learning notes include `#learning` directly under the H1 title
 
 ## Steps
 1. Identify key mistakes, corrections, and reusable practices from the current work.
@@ -17,12 +19,14 @@ Capture reusable, non-sensitive execution learnings to improve future work quali
 3. Determine the best category path under `/neuroplast/learning/`.
 4. If needed, create a new category folder (nested folders allowed).
 5. Add or update a learning note in that category.
-6. Link related learning notes to avoid duplicate categories and fragmented knowledge.
+6. Ensure each learning note includes `#learning` directly under the H1 title.
+7. Link related learning notes to avoid duplicate categories and fragmented knowledge.
 
 ## Validation Checklist
 - [ ] Learning note captures actionable practice-level insight.
 - [ ] No sensitive or brand-specific information is included.
 - [ ] Category placement is logical and non-duplicative.
+- [ ] Learning notes include required Obsidian tag (`#learning`).
 - [ ] Related notes are linked when applicable.
 
 ## Failure Handling

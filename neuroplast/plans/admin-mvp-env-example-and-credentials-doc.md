@@ -1,4 +1,5 @@
 # Plan: Admin MVP Env Example + Credentials Documentation
+#plan
 
 ## Goal
 Add a checked-in environment example for MVP admin credentials and align internal developer docs so local setup is explicit and reproducible.

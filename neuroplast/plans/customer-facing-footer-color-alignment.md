@@ -1,4 +1,5 @@
 # Plan: Customer-Facing Footer Color Alignment
+#plan
 
 ## Goal
 Align footer background color with the premium dark theme so it visually matches surrounding surfaces and preserves readable contrast.

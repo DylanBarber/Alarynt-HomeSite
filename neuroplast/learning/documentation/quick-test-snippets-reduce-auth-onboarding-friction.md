@@ -1,4 +1,5 @@
 # Learning: Quick-test snippets reduce auth onboarding friction
+#learning
 
 ## Context
 After introducing MVP admin auth, documentation covered env variables but lacked a concise behavior verification flow.

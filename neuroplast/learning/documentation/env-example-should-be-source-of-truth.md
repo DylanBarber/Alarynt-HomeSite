@@ -1,4 +1,5 @@
 # Learning: `.env.example` should be the setup source of truth
+#learning
 
 ## Context
 After adding MVP admin login credentials, README examples risk drifting from actual runtime keys unless a checked-in env template is maintained.
