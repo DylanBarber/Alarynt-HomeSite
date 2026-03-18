@@ -1,10 +1,13 @@
 "use client";
 
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useForm, UseFormRegisterReturn } from "react-hook-form";
 import { trackEvent } from "@/lib/analytics";
 import { ContactFormInput, getContactFormSchema } from "@/lib/contactForm";
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 type ContactDemoFormProps = {
   legalLinksEnabled: boolean;
@@ -23,6 +26,8 @@ const initialValues: ContactFormInput = {
 export function ContactDemoForm({ legalLinksEnabled }: ContactDemoFormProps) {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [statusMessage, setStatusMessage] = useState("");
+  const turnstileToken = useRef<string | null>(null);
+  const turnstileRef = useRef<TurnstileInstance | null>(null);
 
   const schema = useMemo(() => getContactFormSchema(legalLinksEnabled), [legalLinksEnabled]);
   const {
@@ -37,6 +42,12 @@ export function ContactDemoForm({ legalLinksEnabled }: ContactDemoFormProps) {
   });
 
   async function onSubmit(values: ContactFormInput) {
+    if (TURNSTILE_SITE_KEY && !turnstileToken.current) {
+      setStatus("error");
+      setStatusMessage("Please complete the verification challenge.");
+      return;
+    }
+
     setStatusMessage("Submitting your request...");
     trackEvent("contact_form_submit_attempt", { hasMessage: Boolean(values.message?.trim()) });
 
@@ -44,7 +55,7 @@ export function ContactDemoForm({ legalLinksEnabled }: ContactDemoFormProps) {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+        body: JSON.stringify({ ...values, turnstileToken: turnstileToken.current }),
       });
 
       if (!response.ok) {
@@ -60,10 +71,14 @@ export function ContactDemoForm({ legalLinksEnabled }: ContactDemoFormProps) {
       setStatus("success");
       setStatusMessage("Thanks! We received your request and will reach out shortly.");
       reset(initialValues);
+      turnstileToken.current = null;
+      turnstileRef.current?.reset();
       trackEvent("contact_form_submit_success");
     } catch {
       setStatus("error");
       setStatusMessage("We could not submit your request. Please try again.");
+      turnstileToken.current = null;
+      turnstileRef.current?.reset();
       trackEvent("contact_form_submit_failure");
     }
   }
@@ -131,6 +146,17 @@ export function ContactDemoForm({ legalLinksEnabled }: ContactDemoFormProps) {
           </p>
         ) : null}
       </div>
+
+      {TURNSTILE_SITE_KEY ? (
+        <Turnstile
+          ref={turnstileRef}
+          siteKey={TURNSTILE_SITE_KEY}
+          onSuccess={(token) => { turnstileToken.current = token; }}
+          onExpire={() => { turnstileToken.current = null; }}
+          onError={() => { turnstileToken.current = null; }}
+          options={{ theme: "dark", size: "flexible" }}
+        />
+      ) : null}
 
       <button
         className="rounded-md bg-[var(--brand-cta)] px-5 py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:bg-[var(--brand-cta)]/50"

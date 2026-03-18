@@ -16,4 +16,4 @@ While implementing the admin panel MVP auth gate in Next.js 16, route protection
 
 ## Related
 - [Learning: Windows path handling with apply_patch](../tooling/windows-apply-patch-paths.md)
-- [Plan: Admin Panel MVP (Session Stub)](../../plans/admin-panel-mvp-session-stub.md)
+- [Plan: Admin Panel MVP (Auth Cookie Stub)](../../plans/admin-panel-mvp-session-stub.md)

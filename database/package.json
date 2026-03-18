@@ -1,0 +1,14 @@
+{
+  "name": "alarynt-database",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "migrate": "node migrate.mjs",
+    "migrate:status": "node migrate.mjs --status",
+    "migrate:create": "node create-migration.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0"
+  }
+}
