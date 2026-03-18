@@ -2,7 +2,7 @@
 #plan
 
 ## Goal
-Implement the planned authenticated admin panel in `web/` using an MVP cookie/session stub for access control and navigation.
+Implement the planned authenticated admin panel in `web/` using an MVP auth-cookie stub for access control and navigation.
 
 ## References
 - `neuroplast/project-concept/Admin Panel.md`
@@ -15,8 +15,8 @@ Implement the planned authenticated admin panel in `web/` using an MVP cookie/se
 1. Scaffold admin route group and deep-linkable module routes (`/admin/*`).
 2. Implement MVP auth flow:
    - `/admin/login` UI
-   - `POST /api/admin/login` cookie session issue
-   - `POST /api/admin/logout` session clear
+   - `POST /api/admin/login` auth cookie issue
+   - `POST /api/admin/logout` auth cookie clear
    - server-side guard for protected admin routes
 3. Build reusable admin shell components:
    - header with tenant context
