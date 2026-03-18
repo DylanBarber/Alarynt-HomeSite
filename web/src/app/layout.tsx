@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const headingFont = Montserrat({
@@ -36,6 +37,7 @@ export default function RootLayout({
         className={`${headingFont.variable} ${bodyFont.variable} ${accentMono.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
