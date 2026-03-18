@@ -1,4 +1,5 @@
 # Plan: Customer Facing Page Implementation
+#plan
 
 ## Goal
 Implement the Customer Facing Page from `obsidian/` documentation as a Next.js app in `web/`.

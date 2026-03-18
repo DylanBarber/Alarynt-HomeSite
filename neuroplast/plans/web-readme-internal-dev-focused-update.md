@@ -1,4 +1,5 @@
 # Plan: Web README Internal Dev Update
+#plan
 
 ## Goal
 Replace the default `web/README.md` template with internal developer-focused documentation aligned to the current Alarynt implementation.

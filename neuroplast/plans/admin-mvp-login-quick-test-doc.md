@@ -1,4 +1,5 @@
 # Plan: Admin MVP Login Quick-Test Documentation
+#plan
 
 ## Goal
 Document a concise local quick-test flow for MVP admin login behavior and keep documentation links aligned with the current `neuroplast/` structure.

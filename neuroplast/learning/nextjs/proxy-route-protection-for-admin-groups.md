@@ -1,4 +1,5 @@
 # Learning: Next.js proxy route protection for admin groups
+#learning
 
 ## Context
 While implementing the admin panel MVP auth gate in Next.js 16, route protection was first added with the legacy `middleware.ts` convention.

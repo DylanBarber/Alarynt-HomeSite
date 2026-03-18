@@ -1,4 +1,5 @@
 # Learning: footer backgrounds should use surface tokens in dark themes
+#learning
 
 ## Context
 While adjusting customer-facing visuals, the footer used a bright primary brand background token, which looked inconsistent against the rest of the premium dark page surfaces.

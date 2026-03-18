@@ -1,4 +1,5 @@
 # Learning: RHF + Zod input/output typing mismatch
+#learning
 
 ## Context
 During the migration to React Hook Form + Zod, TypeScript build failed due to resolver generic mismatch.

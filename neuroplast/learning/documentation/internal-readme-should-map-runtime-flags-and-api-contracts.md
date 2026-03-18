@@ -1,4 +1,5 @@
 # Learning: internal README should map runtime flags and API contracts
+#learning
 
 ## Context
 While converting `web/README.md` from template text to internal developer documentation, the key risk was documenting generic framework behavior instead of the actual implementation details used by the app.

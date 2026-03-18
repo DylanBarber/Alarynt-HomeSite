@@ -1,4 +1,5 @@
 # Planning Instructions (AI-Operator Format)
+#instruction
 
 ## Purpose
 Generate a structured, three-layer conceptual architecture for an application and store all planning artifacts as markdown files.
@@ -14,6 +15,8 @@ Generate a structured, three-layer conceptual architecture for an application an
   - `<PageName> - Mid Level.md`
 - Global architecture file:
   - `Tech Stack Architecture.md`
+
+All generated planning files must include `#project-concept` directly under the H1 title.
 
 All output files should be placed in the designated planning output folder (typically `/neuroplast/project-concept/`).
 

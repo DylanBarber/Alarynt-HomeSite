@@ -1,4 +1,5 @@
 # Plan: Customer-Facing Premium Dark Theme
+#plan
 
 ## Goal
 Apply a dark-only premium visual theme to the customer-facing site while preserving existing content structure, flows, and accessibility expectations.

@@ -1,4 +1,5 @@
 # Learning: Remove protected routes while keeping login entry
+#learning
 
 ## Context
 When removing an authenticated module surface but keeping login, route-guard and post-login assumptions often still point to deleted destinations.

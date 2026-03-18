@@ -1,4 +1,5 @@
 # Plan: Contact Form RHF + Zod Migration
+#plan
 
 ## Goal
 Migrate the customer-facing Contact/Demo form from manual state + manual validation to React Hook Form + Zod while preserving current UX behavior.

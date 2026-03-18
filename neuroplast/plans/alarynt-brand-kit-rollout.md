@@ -1,4 +1,5 @@
 # Plan: Alarynt Brand Kit Rollout
+#plan
 
 ## Goal
 Apply the new Alarynt branding kit across the customer-facing web experience and project documentation, replacing prior brand naming everywhere in-repo.

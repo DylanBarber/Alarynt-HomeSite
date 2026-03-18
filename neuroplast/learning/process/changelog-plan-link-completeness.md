@@ -1,4 +1,5 @@
 # Learning: changelog plan-link completeness
+#learning
 
 ## Context
 While aligning plan files under `brain/plans/` with dated entries in `brain/project-concept/changelog/`, some plans were executed but not explicitly linked in the corresponding day file.

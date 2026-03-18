@@ -1,4 +1,5 @@
 # Alarynt Brand Usage Guide
+#project-concept
 
 ## Brand Core
 - **Brand name:** Alarynt

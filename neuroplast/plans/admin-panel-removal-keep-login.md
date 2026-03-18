@@ -1,4 +1,5 @@
 # Plan: Remove Admin Panel Implementation, Keep Admin Login
+#plan
 
 ## Goal
 Remove the currently implemented admin panel surface from `web/` while preserving the existing customer-facing page and keeping the admin login flow available.

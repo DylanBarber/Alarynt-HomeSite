@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "installedVersion": "1.1.0",
+  "lastSyncedVersion": "1.1.0",
+  "appliedMigrations": [],
+  "managedFiles": [
+    "neuroplast/.obsidian/app.json",
+    "neuroplast/.obsidian/appearance.json",
+    "neuroplast/.obsidian/core-plugins.json",
+    "neuroplast/.obsidian/graph.json",
+    "neuroplast/CHANGELOG_INSTRUCTIONS.md",
+    "neuroplast/CONCEPT_INSTRUCTIONS.md",
+    "neuroplast/PLANNING_INSTRUCTIONS.md",
+    "neuroplast/act.md",
+    "neuroplast/conceptualize.md",
+    "neuroplast/think.md"
+  ]
+}
