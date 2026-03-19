@@ -154,7 +154,7 @@ export function ContactDemoForm({ legalLinksEnabled }: ContactDemoFormProps) {
           onSuccess={(token) => { turnstileToken.current = token; }}
           onExpire={() => { turnstileToken.current = null; }}
           onError={() => { turnstileToken.current = null; }}
-          options={{ theme: "dark", size: "flexible" }}
+          options={{ theme: "dark", size: "invisible" }}
         />
       ) : null}
 
