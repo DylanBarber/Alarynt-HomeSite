@@ -7,9 +7,9 @@ export function SiteHeader() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-neutral-950/60 backdrop-blur-xl shadow-2xl shadow-black/50">
-      <div className="relative flex items-center px-8 py-4 max-w-7xl mx-auto">
-        <a href="/" className="font-headline text-2xl font-bold tracking-tighter text-neutral-50">
-          Alarynt
+      <div className="relative flex items-center h-12 px-8 max-w-7xl mx-auto">
+        <a href="/" className="h-full flex items-center">
+          <img src="/header-image.png" alt="Alarynt" className="h-full w-auto object-contain" />
         </a>
 
         {/* Desktop nav — absolutely centered */}
