@@ -1,39 +1,91 @@
 @import "tailwindcss";
 
-:root {
-  --background: #0b1220;
-  --foreground: #e8eef8;
-  --brand-primary: #8db4ff;
-  --brand-accent: #2dd4bf;
-  --brand-cta: #ff8a5b;
-  --brand-surface: #121c2f;
-  --brand-muted: #283854;
-}
+@theme {
+  /* Surfaces */
+  --color-surface: #101319;
+  --color-surface-dim: #101319;
+  --color-surface-bright: #363940;
+  --color-surface-container-lowest: #0b0e14;
+  --color-surface-container-low: #191c22;
+  --color-surface-container: #1d2026;
+  --color-surface-container-high: #272a31;
+  --color-surface-container-highest: #32353c;
+  --color-surface-variant: #32353c;
+  --color-surface-tint: #c3c0ff;
+  --color-background: #101319;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-body);
-  --font-mono: var(--font-accent-mono);
+  /* On-surface */
+  --color-on-background: #e1e2eb;
+  --color-on-surface: #e1e2eb;
+  --color-on-surface-variant: #c7c4d8;
+  --color-inverse-surface: #e1e2eb;
+  --color-inverse-on-surface: #2e3037;
+
+  /* Outline */
+  --color-outline: #918fa1;
+  --color-outline-variant: #464555;
+
+  /* Primary */
+  --color-primary: #c3c0ff;
+  --color-primary-container: #4f46e5;
+  --color-primary-fixed: #e2dfff;
+  --color-primary-fixed-dim: #c3c0ff;
+  --color-inverse-primary: #4d44e3;
+  --color-on-primary: #1d00a5;
+  --color-on-primary-container: #dad7ff;
+  --color-on-primary-fixed: #0f0069;
+  --color-on-primary-fixed-variant: #3323cc;
+
+  /* Secondary */
+  --color-secondary: #bcc7de;
+  --color-secondary-container: #3e495d;
+  --color-secondary-fixed: #d8e3fb;
+  --color-secondary-fixed-dim: #bcc7de;
+  --color-on-secondary: #263143;
+  --color-on-secondary-container: #aeb9d0;
+  --color-on-secondary-fixed: #111c2d;
+  --color-on-secondary-fixed-variant: #3c475a;
+
+  /* Tertiary */
+  --color-tertiary: #bdc2ff;
+  --color-tertiary-container: #4a55be;
+  --color-tertiary-fixed: #e0e0ff;
+  --color-tertiary-fixed-dim: #bdc2ff;
+  --color-on-tertiary: #131e8c;
+  --color-on-tertiary-container: #d7d8ff;
+  --color-on-tertiary-fixed: #000767;
+  --color-on-tertiary-fixed-variant: #2f3aa3;
+
+  /* Error */
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error: #690005;
+  --color-on-error-container: #ffdad6;
+
+  /* Fonts — reference next/font CSS variables so preloaded .woff2 files are consumed */
+  --font-headline: var(--font-heading), serif;
+  --font-body: var(--font-body-base), sans-serif;
+  --font-label: var(--font-body-base), sans-serif;
+  --font-sans: var(--font-body-base), sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  background-color: #101319;
+  color: #e1e2eb;
+  font-family: "Inter", sans-serif;
+}
+
+.perspective-grid {
+  background-image: radial-gradient(circle at 2px 2px, #464555 1px, transparent 0);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
 :focus-visible {
-  outline: 2px solid var(--brand-accent);
+  outline: 2px solid #c3c0ff;
   outline-offset: 2px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
-  color: var(--foreground);
 }

@@ -64,7 +64,6 @@ export function ContactDemoForm({ legalLinksEnabled }: ContactDemoFormProps) {
           setStatusMessage("Please review your form details and try again.");
           return;
         }
-
         throw new Error("Submission failed");
       }
 
@@ -89,10 +88,10 @@ export function ContactDemoForm({ legalLinksEnabled }: ContactDemoFormProps) {
   }
 
   return (
-    <form className="mt-6 space-y-4" onSubmit={handleSubmit(onSubmit, onInvalidSubmit)} noValidate>
-      <div className="grid gap-4 sm:grid-cols-2">
+    <form className="space-y-6" onSubmit={handleSubmit(onSubmit, onInvalidSubmit)} noValidate>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Field id="name" label="Name" register={register("name")} error={errors.name?.message} required />
-        <Field id="email" label="Email" type="email" register={register("email")} error={errors.email?.message} required />
+        <Field id="email" label="Work Email" type="email" register={register("email")} error={errors.email?.message} required />
         <Field
           id="companyName"
           label="Company Name"
@@ -110,22 +109,25 @@ export function ContactDemoForm({ legalLinksEnabled }: ContactDemoFormProps) {
         />
       </div>
 
-      <label className="block text-sm font-medium" htmlFor="message">
-        Message (optional)
+      <div className="space-y-2">
+        <label className="block text-[0.6875rem] font-bold text-on-surface-variant uppercase tracking-widest" htmlFor="message">
+          The Biggest Mess Right Now
+        </label>
         <textarea
           id="message"
-          className="mt-1 min-h-28 w-full rounded-md border border-[var(--brand-muted)] bg-[var(--background)] px-3 py-2"
+          className="w-full bg-surface-container-highest border-none rounded-lg focus:ring-2 focus:ring-primary text-on-surface py-3 px-3 min-h-28"
+          placeholder="Spreadsheets, manual entry, broken APIs..."
           {...register("message")}
         />
-      </label>
+      </div>
 
       {legalLinksEnabled ? (
-        <label className="flex items-start gap-2 text-sm" htmlFor="privacyAccepted">
-          <input id="privacyAccepted" type="checkbox" {...register("privacyAccepted")} />
+        <label className="flex items-start gap-2 text-sm text-on-surface-variant" htmlFor="privacyAccepted">
+          <input id="privacyAccepted" type="checkbox" className="mt-1" {...register("privacyAccepted")} />
           <span>
             I acknowledge the Privacy Statement for this form submission.
             {errors.privacyAccepted?.message ? (
-              <span className="mt-1 block text-xs text-red-300">{errors.privacyAccepted.message}</span>
+              <span className="mt-1 block text-xs text-error">{errors.privacyAccepted.message}</span>
             ) : null}
           </span>
         </label>
@@ -133,15 +135,7 @@ export function ContactDemoForm({ legalLinksEnabled }: ContactDemoFormProps) {
 
       <div aria-live="polite" className="text-sm">
         {statusMessage ? (
-          <p
-              className={
-                status === "error"
-                  ? "text-red-300"
-                  : status === "success"
-                    ? "text-[var(--brand-accent)]"
-                    : "text-[var(--foreground)]/75"
-              }
-          >
+          <p className={status === "error" ? "text-error" : status === "success" ? "text-primary" : "text-on-surface-variant"}>
             {statusMessage}
           </p>
         ) : null}
@@ -158,13 +152,15 @@ export function ContactDemoForm({ legalLinksEnabled }: ContactDemoFormProps) {
         />
       ) : null}
 
-      <button
-        className="rounded-md bg-[var(--brand-cta)] px-5 py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:bg-[var(--brand-cta)]/50"
-        disabled={isSubmitting}
-        type="submit"
-      >
-        {isSubmitting ? "Submitting..." : "Request Demo"}
-      </button>
+      <div className="text-center pt-2">
+        <button
+          className="w-full md:w-auto px-12 py-4 bg-primary text-on-primary font-bold rounded shadow-lg hover:bg-primary-fixed-dim transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={isSubmitting}
+          type="submit"
+        >
+          {isSubmitting ? "Submitting..." : "Book My Walkthrough"}
+        </button>
+      </div>
     </form>
   );
 }
@@ -182,22 +178,24 @@ function Field({ id, label, register, error, type = "text", required = false }: 
   const errorId = `${id}-error`;
 
   return (
-    <label className="block text-sm font-medium" htmlFor={id}>
-      {label}
-      {required ? <span className="text-red-300"> *</span> : null}
+    <div className="space-y-2">
+      <label className="block text-[0.6875rem] font-bold text-on-surface-variant uppercase tracking-widest" htmlFor={id}>
+        {label}
+        {required ? <span className="text-error"> *</span> : null}
+      </label>
       <input
         id={id}
         type={type}
         {...register}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? errorId : undefined}
-        className="mt-1 w-full rounded-md border border-[var(--brand-muted)] bg-[var(--background)] px-3 py-2"
+        className="w-full bg-surface-container-highest border-none rounded-lg focus:ring-2 focus:ring-primary text-on-surface py-3 px-3"
       />
       {error ? (
-        <span className="mt-1 block text-xs text-red-300" id={errorId}>
+        <span className="block text-xs text-error" id={errorId}>
           {error}
         </span>
       ) : null}
-    </label>
+    </div>
   );
 }

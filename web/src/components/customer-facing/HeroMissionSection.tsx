@@ -1,38 +1,43 @@
 export function HeroMissionSection() {
   return (
-    <section id="mission" aria-labelledby="mission-heading" className="scroll-mt-28 px-4 py-16 sm:px-6">
-      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
-        <div>
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-[var(--brand-accent)]">
-            Actionable insights, powered by AI
-          </p>
-          <h1 id="mission-heading" className="text-4xl font-bold tracking-tight sm:text-5xl">
-            We turn your company&apos;s data chaos into an AI-ready system
-          </h1>
-          <p className="mt-5 max-w-2xl text-lg text-[var(--foreground)]/85">
-            Alarynt turns messy, disconnected company data into structured insights and automated workflows so teams
-            can decide faster and operate more efficiently.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a className="rounded-md bg-[var(--brand-cta)] px-5 py-3 text-sm font-semibold text-white" href="#contact">
-              Request Demo
-            </a>
-            <a
-              className="rounded-md border border-[var(--brand-muted)] bg-[var(--brand-surface)] px-5 py-3 text-sm font-semibold text-[var(--foreground)]"
-              href="#capabilities"
-            >
-              Explore Capabilities
-            </a>
-          </div>
+    <section
+      id="mission"
+      className="relative min-h-[819px] flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden scroll-mt-20"
+    >
+      <div className="absolute inset-0 perspective-grid opacity-20 pointer-events-none" />
+      <div className="relative z-10 max-w-4xl">
+        <span className="inline-block py-1 px-3 mb-6 text-[0.6875rem] font-bold uppercase tracking-widest bg-surface-container-high text-primary border border-outline-variant/20 rounded-full">
+          Data Operations &amp; Strategy
+        </span>
+        <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface mb-8 leading-tight">
+          We turn your company&apos;s data chaos into a system that{" "}
+          <span className="italic text-primary">actually works</span>.
+        </h1>
+        <p className="text-xl text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed">
+          Most AI tools fail because the data underneath is a mess. We fix that
+          first — then build the automations and insights your team actually
+          needs.
+        </p>
+        <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-16">
+          <a
+            href="#contact"
+            className="px-8 py-4 bg-gradient-to-br from-primary-container to-tertiary-container text-white font-bold rounded shadow-lg hover:scale-[1.02] transition-transform"
+          >
+            Book My Walkthrough
+          </a>
+          <a
+            href="#capabilities"
+            className="px-8 py-4 border border-outline-variant/40 hover:bg-surface-bright/10 text-on-surface font-semibold rounded transition-colors"
+          >
+            Explore Our Capabilities
+          </a>
         </div>
-        <aside className="rounded-xl border border-[var(--brand-muted)] bg-[var(--brand-surface)] p-6 shadow-sm shadow-black/20">
-          <h2 className="text-lg font-semibold">From raw spreadsheets to real-time insights</h2>
-          <ul className="mt-3 space-y-2 text-sm text-[var(--foreground)]/85">
-            <li>• Your data, organized and actionable</li>
-            <li>• Automated workflows that actually save time</li>
-            <li>• AI is just the interface — we deliver the results</li>
-          </ul>
-        </aside>
+        <div className="p-6 rounded-xl bg-surface-container-low border-t border-outline-variant/10 max-w-lg mx-auto">
+          <p className="text-sm text-on-surface-variant font-medium italic">
+            &ldquo;Built for growing teams who know their data is holding them
+            back but don&apos;t have a full-time data engineer to fix it.&rdquo;
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -1,29 +1,24 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Montserrat } from "next/font/google";
+import { Inter, Noto_Serif } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const headingFont = Montserrat({
+const headingFont = Noto_Serif({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["700", "800"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
 });
 
 const bodyFont = Inter({
-  variable: "--font-body",
+  variable: "--font-body-base",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
-
-const accentMono = JetBrains_Mono({
-  variable: "--font-accent-mono",
-  subsets: ["latin"],
-  weight: ["500", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
   title: "Alarynt",
-  description: "We turn your company's data chaos into an AI-ready system",
+  description: "We turn your company's data chaos into a system that actually works.",
 };
 
 export default function RootLayout({
@@ -32,9 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
-        className={`${headingFont.variable} ${bodyFont.variable} ${accentMono.variable} antialiased`}
+        className={`${headingFont.variable} ${bodyFont.variable} antialiased bg-surface text-on-surface`}
       >
         {children}
         <Analytics />
