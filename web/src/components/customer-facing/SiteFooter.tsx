@@ -7,11 +7,8 @@ export function SiteFooter() {
           <p className="text-neutral-500 text-xs tracking-wide">Data Architects for the Growing Enterprise.</p>
         </div>
         <div className="flex gap-8">
-          <a className="text-neutral-500 hover:text-neutral-300 transition-colors text-sm tracking-wide" href="#">
+          <a className="text-neutral-500 hover:text-neutral-300 transition-colors text-sm tracking-wide" href="/privacy">
             Privacy Policy
-          </a>
-          <a className="text-neutral-500 hover:text-neutral-300 transition-colors text-sm tracking-wide" href="#">
-            LinkedIn
           </a>
         </div>
         <div className="text-neutral-500 text-sm tracking-wide">

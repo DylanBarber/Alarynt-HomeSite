@@ -2,7 +2,7 @@ import { SiteHeader } from "@/components/customer-facing/SiteHeader";
 import { SiteFooter } from "@/components/customer-facing/SiteFooter";
 
 export const metadata = {
-  title: "Our Methodology | Alarynt",
+  title: "Capabilities | Alarynt",
   description: "Specialized architectural frameworks for lean organizations of 10 to 50 people.",
 };
 
@@ -64,7 +64,7 @@ export default function MethodologyPage() {
                     <span className="text-primary font-headline text-4xl font-black">10</span>
                     <span className="text-[10px] uppercase tracking-widest text-on-surface-variant">Start State</span>
                   </div>
-                  <div className="bg-tertiary-container/20 rounded-lg p-6 flex flex-col justify-end translate-y-8 border-t border-white/10">
+                  <div className="bg-tertiary-container/20 rounded-lg p-6 flex flex-col justify-end border-t border-white/10">
                     <span className="text-tertiary font-headline text-4xl font-black">50</span>
                     <span className="text-[10px] uppercase tracking-widest text-on-surface-variant">Scale Point</span>
                   </div>
@@ -228,9 +228,6 @@ export default function MethodologyPage() {
                 >
                   Book My Walkthrough
                 </a>
-                <button className="bg-transparent border border-on-primary-container/30 px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-colors">
-                  Download Methodology PDF
-                </button>
               </div>
             </div>
           </div>

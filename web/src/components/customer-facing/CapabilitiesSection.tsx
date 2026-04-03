@@ -6,7 +6,7 @@ export function CapabilitiesSection() {
           <img
             alt="Data dashboard visualization"
             className="w-full h-full object-cover grayscale opacity-60"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUu6BBGDnzTZ_4HkV1rz264HMxGWXtGcpb8FzWs9X1LPU7U85AS9rU7lxM1Nka5OWfzDTAeLSbLJxG31eG1uGvs3ZqgiV7kbJ9yvdyQpDcWOFkUHN3taAyewS8taFSD8v2gSaheg6qbk_t2Xrd8qPxBsbmLKzHf5TXIGOcKNO2S9HFMfQpEXZRuh1KNLgiY4VZKJNsrgrZZBW1FSn3r-U7Iv-YyBM-S1edLfVOEmNaUwBQekHGYp6WfUX3sgwafSvxdgcyOsuLaEWB"
+            src="/home-page-image.png"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent" />
         </div>

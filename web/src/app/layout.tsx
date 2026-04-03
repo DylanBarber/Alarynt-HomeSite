@@ -11,7 +11,7 @@ const headingFont = Noto_Serif({
 });
 
 const bodyFont = Inter({
-  variable: "--font-body",
+  variable: "--font-body-base",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });
@@ -35,7 +35,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${headingFont.variable} ${bodyFont.variable} antialiased`}
+        className={`${headingFont.variable} ${bodyFont.variable} antialiased bg-surface text-on-surface`}
       >
         {children}
         <Analytics />

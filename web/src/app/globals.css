@@ -62,11 +62,11 @@
   --color-on-error: #690005;
   --color-on-error-container: #ffdad6;
 
-  /* Fonts */
-  --font-headline: "Noto Serif", serif;
-  --font-body: "Inter", sans-serif;
-  --font-label: "Inter", sans-serif;
-  --font-sans: "Inter", sans-serif;
+  /* Fonts — reference next/font CSS variables so preloaded .woff2 files are consumed */
+  --font-headline: var(--font-heading), serif;
+  --font-body: var(--font-body-base), sans-serif;
+  --font-label: var(--font-body-base), sans-serif;
+  --font-sans: var(--font-body-base), sans-serif;
 }
 
 body {

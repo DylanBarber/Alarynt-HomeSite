@@ -1,6 +1,5 @@
 import { CapabilitiesSection } from "@/components/customer-facing/CapabilitiesSection";
 import { ContactDemoSection } from "@/components/customer-facing/ContactDemoSection";
-import { FounderSection } from "@/components/customer-facing/FounderSection";
 import { HeroMissionSection } from "@/components/customer-facing/HeroMissionSection";
 import { HowItWorksSection } from "@/components/customer-facing/HowItWorksSection";
 import { ProofSection } from "@/components/customer-facing/ProofSection";
@@ -19,7 +18,6 @@ export default function CustomerFacingPage() {
         <CapabilitiesSection />
         <ProofSection />
         <HowItWorksSection />
-        <FounderSection />
         <ContactDemoSection legalLinksEnabled={featureFlags.legalLinksEnabled} />
       </main>
       <SiteFooter />
